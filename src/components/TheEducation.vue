@@ -1,9 +1,11 @@
-<script lang='ts' setup></script>
+<script lang='ts' setup>
+const { t } = useI18n()
+</script>
 
 <template>
   <section class="min-h-0 flex flex-col gap-y-3">
     <h2 class="text-xl font-bold">
-      Education
+      {{ t('title.education') }}
     </h2><div class="bg-card text-card-foreground rounded-lg">
       <div class="flex flex-col space-y-1.5">
         <div class="flex items-center justify-between gap-x-2 text-base">

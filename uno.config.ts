@@ -20,10 +20,12 @@ export default defineConfig({
       'page-base',
       'page-tab-height flex flex-col py-3 flex-1 bg-page_bg box-border',
     ],
-    ['absolute-lt', 'absolute left-0 top-0'],
-    ['absolute-lb', 'absolute left-0 bottom-0'],
-    ['absolute-rt', 'absolute right-0 top-0'],
-    ['absolute-rb', 'absolute right-0 bottom-0'],
+    ['abs-lt', 'absolute left-0 top-0'],
+    ['abs-lb', 'absolute left-0 bottom-0'],
+    ['abs-rt', 'absolute right-0 top-0'],
+    ['abs-rb', 'absolute right-0 bottom-0'],
+    ['abs-ct', 'absolute right-0 left-0 top-0'],
+    ['abs-cb', 'absolute right-0 left-0 bottom-0'],
 
   ],
   presets: [

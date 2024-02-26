@@ -1,9 +1,11 @@
-<script lang='ts' setup></script>
+<script lang='ts' setup>
+const { t } = useI18n()
+</script>
 
 <template>
   <section class="min-h-0 flex flex-col gap-y-3">
     <h2 class="text-xl font-bold">
-      Work Experience
+      {{ t('title.experience') }}
     </h2>
     <div class="bg-card text-card-foreground rounded-lg">
       <div class="flex flex-col space-y-1.5">
@@ -11,7 +13,7 @@
           <h3 class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
             <a class="hover:underline" href="https://parabol.co">Parabol</a><span class="inline-flex gap-x-1">
               <div
-                class="focus:ring-ring bg-secondary text-secondary-foreground hover:bg-secondary/60 inline-flex items-center border border-transparent rounded-md px-2 py-0.5 text-nowrap align-middle text-xs font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
+                class="bg-secondary text-secondary-foreground hover:bg-secondary/60 focus:ring-ring inline-flex items-center border border-transparent rounded-md px-2 py-0.5 text-nowrap align-middle text-xs font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
               >
                 Remote</div>
             </span>

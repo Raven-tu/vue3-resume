@@ -1,9 +1,11 @@
-<script lang='ts' setup></script>
+<script lang='ts' setup>
+const { t } = useI18n()
+</script>
 
 <template>
   <section class="print-force-new-page min-h-0 flex flex-col scroll-mb-16 gap-y-3">
     <h2 class="text-xl font-bold">
-      Projects
+      {{ t('title.projects') }}
     </h2>
     <div class="grid grid-cols-1 gap-3 lg:grid-cols-3 md:grid-cols-2 print:grid-cols-3 -mx-3 print:gap-2">
       <div class="bg-card text-card-foreground border-muted flex flex-col overflow-hidden border rounded-lg p-3">

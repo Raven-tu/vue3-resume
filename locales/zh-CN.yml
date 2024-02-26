@@ -5,6 +5,8 @@ button:
   home: 首页
   toggle_dark: 切换深色模式
   toggle_langs: 切换语言
+  import: 导入
+  export: 导出
 intro:
   desc: 固执己见的 Vite 项目模板
   dynamic-route: 动态路由演示
@@ -12,3 +14,9 @@ intro:
   aka: 也叫
   whats-your-name: 输入你的名字
 not-found: 未找到页面
+title:
+  experience: 工作经历
+  education: 教育
+  projects: 项目
+  skills: 技能
+language: 简体中文
