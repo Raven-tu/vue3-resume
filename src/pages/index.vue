@@ -4,6 +4,7 @@ import TheExperience from '~/components/TheExperience.vue'
 import TheSkills from '~/components/TheSkills.vue'
 import TheEducation from '~/components/TheEducation.vue'
 import TheHeader from '~/components/TheHeader.vue'
+import TheProjects from '~/components/TheProjects.vue'
 
 defineOptions({
   name: 'IndexPage',
@@ -23,6 +24,7 @@ const componentList = [
   TheExperience,
   TheSkills,
   TheEducation,
+  TheProjects,
 ]
 </script>
 
