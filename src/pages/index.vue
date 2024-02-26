@@ -1,56 +1,36 @@
+import Layouts from 'vite-plugin-vue-layouts';
 <script setup lang="ts">
+import TheExperience from '~/components/TheExperience.vue'
+import TheSkills from '~/components/TheSkills.vue'
+import TheEducation from '~/components/TheEducation.vue'
+import TheHeader from '~/components/TheHeader.vue'
+
 defineOptions({
   name: 'IndexPage',
 })
-const user = useUserStore()
-const name = ref(user.savedName)
+// const user = useUserStore()
+// const name = ref(user.savedName)
 
-const router = useRouter()
-function go() {
-  if (name.value)
-    router.push(`/hi/${encodeURIComponent(name.value)}`)
-}
+// const router = useRouter()
+// function go() {
+//   if (name.value)
+//     router.push(`/hi/${encodeURIComponent(name.value)}`)
+// }
 
-const { t } = useI18n()
+// const { t } = useI18n()
+
+const componentList = [
+  TheExperience,
+  TheSkills,
+  TheEducation,
+]
 </script>
 
 <template>
-  <div>
-    <div text-4xl>
-      <div i-carbon-campsite inline-block />
-    </div>
-    <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
-        Vitesse
-      </a>
-    </p>
-    <p>
-      <em text-sm opacity-75>{{ t('intro.desc') }}</em>
-    </p>
-
-    <div py-4 />
-
-    <TheInput
-      v-model="name"
-      :placeholder="t('intro.whats-your-name')"
-      autocomplete="false"
-      @keydown.enter="go"
-    />
-    <label class="hidden" for="input">{{ t('intro.whats-your-name') }}</label>
-
-    <div>
-      <button
-        m-3 text-sm btn
-        :disabled="!name"
-        @click="go"
-      >
-        {{ t('button.go') }}
-      </button>
-    </div>
+  <div class="mx-auto max-w-2xl w-full bg-white space-y-8 print:space-y-6">
+    <TheHeader />
+    <section v-for="(name, index) in componentList" :key="index" class="min-h-0 flex flex-col gap-y-3">
+      <component :is="name" />
+    </section>
   </div>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: home
-</route>
