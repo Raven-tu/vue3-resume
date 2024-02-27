@@ -12,7 +12,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "preview-https": "serve dist",
-    "test": "vitest",
+    "test": "vitest --watch",
     "test:e2e": "cypress open",
     "test:unit": "vitest",
     "typecheck": "vue-tsc --noEmit",
