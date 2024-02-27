@@ -14,7 +14,6 @@ declare module 'vue' {
     TheCounter: typeof import('./components/TheCounter.vue')['default']
     TheEducation: typeof import('./components/TheEducation.vue')['default']
     TheExperience: typeof import('./components/TheExperience.vue')['default']
-    TheFooter: typeof import('./components/TheFooter.vue')['default']
     TheHeader: typeof import('./components/TheHeader.vue')['default']
     TheInput: typeof import('./components/TheInput.vue')['default']
     TheNavBtn: typeof import('./components/TheNavBtn.vue')['default']

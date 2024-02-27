@@ -39,7 +39,7 @@ function printingPage() {
       <div i="carbon-sun dark:carbon-moon" />
     </button>
 
-    <a icon-btn rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank" title="GitHub">
+    <a icon-btn rel="noreferrer" href="https://github.com/Raven-tu/vue3-resume" target="_blank" title="GitHub">
       <div i-carbon-logo-github />
     </a>
   </nav>
