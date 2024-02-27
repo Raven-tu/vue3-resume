@@ -1,4 +1,5 @@
 import path from 'node:path'
+import process from 'node:process'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Layouts from 'vite-plugin-vue-layouts'
@@ -23,7 +24,7 @@ export default defineConfig({
     },
   },
 
-  base: '/vue3-resume/',
+  base: process.env.NODE_ENV === 'production' ? '/vue3-resume/' : '/',
 
   plugins: [
     VueMacros({

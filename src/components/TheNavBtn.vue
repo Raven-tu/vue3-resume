@@ -1,7 +1,11 @@
 <script setup lang="ts">
+import ImportDialog from './ImportDialog.vue'
 import { availableLocales, loadLanguageAsync } from '~/modules/i18n'
 
 const { t, locale } = useI18n()
+
+const dialogvisible = ref(false)
+provide('dialogvisible', dialogvisible)
 
 async function toggleLocales() {
   // change to some real logic
@@ -18,13 +22,9 @@ function printingPage() {
 
 <template>
   <nav flex="~ gap-4" m-4 justify-center text-xl>
-    <!-- <button icon-btn :title="t('button.import')" @click="toggleDark()">
-      <div i="carbon-document-import" />
+    <button icon-btn :title="t('button.export')" @click="dialogvisible = true">
+      <div i="carbon-document" />
     </button>
-
-    <button icon-btn :title="t('button.export')" @click="toggleDark()">
-      <div i="carbon-document-export" />
-    </button> -->
 
     <button icon-btn :title="t('button.printer')" @click="printingPage()">
       <div i="carbon-printer" />
@@ -42,5 +42,7 @@ function printingPage() {
     <a icon-btn rel="noreferrer" href="https://github.com/Raven-tu/vue3-resume" target="_blank" title="GitHub">
       <div i-carbon-logo-github />
     </a>
+
+    <ImportDialog />
   </nav>
 </template>

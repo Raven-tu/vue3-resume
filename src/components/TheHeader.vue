@@ -1,18 +1,28 @@
-<script lang='ts' setup></script>
+<script lang='ts' setup>
+import { storeToRefs } from 'pinia'
+
+const { currentData } = storeToRefs(useResumestore())
+const aboutData = computed({
+  get: () => currentData.value.about,
+  set: (value) => {
+    currentData.value.about = value
+  },
+})
+</script>
 
 <template>
   <div class="flex items-center justify-between container">
     <div class="info flex-1 space-y-1.5">
       <h1 class="font-weight-400 text-2xl font-bold">
-        Miguel Ángel Durán
+        {{ aboutData.name }}
       </h1>
       <h2 class="text-muted-foreground max-w-md text-pretty text-sm font-mono">
-        Full Stack Developer con más de 15 años de experiencia &amp; Creador de Contenido de Programación
+        {{ aboutData.role }}
       </h2>
       <span class="text-muted-foreground max-w-md items-center text-pretty text-xs font-mono">
-        el Prat de Llobregat, España </span>
-      <footer class="print">
-        miduga@gmail.com • +34 688888888 • https://linkedin.com/in/midudev
+        {{ aboutData.location }} </span>
+      <footer class="contack">
+        {{ aboutData.email }} | {{ aboutData.phone }} | {{ aboutData.linkedin }}
       </footer>
     </div>
     <figure class="relative size-28 flex shrink-0 overflow-hidden rounded-xl">

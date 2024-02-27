@@ -1,6 +1,7 @@
 button:
   about: 关于
   back: 返回
+  copy: 复制
   export: 导出
   go: 确定
   home: 首页

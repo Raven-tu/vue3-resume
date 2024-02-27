@@ -1,10 +1,11 @@
 button:
   about: これは？
   back: 戻る
+  copy: コピー
   export: エクスポート
   go: 進む
   home: ホーム
-  import: インポート
+  import: 輸入
   printer: 印刷
   toggle_dark: ダークモード切り替え
   toggle_langs: 言語切り替え

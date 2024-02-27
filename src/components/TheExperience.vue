@@ -1,44 +1,15 @@
 <script lang='ts' setup>
+import { storeToRefs } from 'pinia'
+
 const { t } = useI18n()
 
-const experienceList = ref([
-  {
-    company: 'Parabol',
-    link: 'https://parabol.co',
-    location: 'Remote',
-    start: 2021,
-    end: 2024,
-    position: 'Senior Full Stack Developer',
-    description: 'Implemented new features, led squad, worked on improving the way developers ship the code, started migration from Emotion to Tailwind CSS and more. Technologies: React, TypeScript, GraphQL',
+const { currentData } = storeToRefs(useResumestore())
+const experienceData = computed({
+  get: () => currentData.value.experience,
+  set: (value) => {
+    currentData.value.experience = value
   },
-  {
-    company: 'Clevertech',
-    link: 'https://clevertech.biz',
-    location: 'Remote',
-    start: 2015,
-    end: 2021,
-    position: 'Lead Android Developer → Full Stack Developer',
-    description: 'Created Android mobile apps and led teams for companies like Vision Media, DKMS, or AAA. Built live streaming application for Evercast from scratch. Technologies: Android, Kotlin, React, TypeScript, GraphQL',
-  },
-  {
-    company: 'Jojo Mobile',
-    link: 'https://bsgroup.eu/',
-    location: '',
-    start: 2012,
-    end: 2015,
-    position: 'Android Developer → Lead Android Developer',
-    description: 'Built an Android team, created Android apps for biggest Polish companies like LOT, Polskie Radio, Agora, PolskaPress',
-  },
-  {
-    company: 'Nokia Siemens Networks',
-    link: 'https://www.nokia.com',
-    location: '',
-    start: 2010,
-    end: 2012,
-    position: 'C/C++ Developer',
-    description: 'Creating and testing software for LTE base stations',
-  },
-])
+})
 </script>
 
 <template>
@@ -47,7 +18,7 @@ const experienceList = ref([
       {{ t('title.experience') }}
     </h2>
     <!-- list  -->
-    <div v-for="(item, index) in experienceList" :key="index" class="bg-card text-card-foreground rounded-lg">
+    <div v-for="(item, index) in experienceData" :key="index" class="bg-card text-card-foreground rounded-lg">
       <div class="flex flex-col space-y-1.5">
         <div class="flex items-center justify-between gap-x-2 text-base">
           <h3 class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">

@@ -8,6 +8,7 @@ button:
   printer: Printing
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
+  copy: Copy
 intro:
   aka: Also known as
   desc: Opinionated Vite Starter Template
