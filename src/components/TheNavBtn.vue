@@ -10,6 +10,10 @@ async function toggleLocales() {
   await loadLanguageAsync(newLocale)
   locale.value = newLocale
 }
+
+function printingPage() {
+  window.print()
+}
 </script>
 
 <template>
@@ -21,6 +25,10 @@ async function toggleLocales() {
     <button icon-btn :title="t('button.export')" @click="toggleDark()">
       <div i="carbon-document-export" />
     </button> -->
+
+    <button icon-btn :title="t('button.printer')" @click="printingPage()">
+      <div i="carbon-printer" />
+    </button>
 
     <a flex-cc icon-btn space-x-1 :title="t('button.toggle_langs')" @click="toggleLocales()">
       <span text-sm>{{ t('language') }}</span>

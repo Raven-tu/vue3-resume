@@ -1,21 +1,22 @@
 button:
   about: これは？
   back: 戻る
+  export: エクスポート
   go: 進む
   home: ホーム
+  import: インポート
+  printer: 印刷
   toggle_dark: ダークモード切り替え
   toggle_langs: 言語切り替え
-  import: インポート
-  export: エクスポート
 intro:
   desc: 固執された Vite スターターテンプレート
   dynamic-route: 動的ルートのデモ
   hi: こんにちは、{name}!
   whats-your-name: 君の名は。
+language: 日本語
 not-found: 見つかりませんでした
 title:
-  experience: 職務経歴
   education: 教育
+  experience: 職務経歴
   projects: プロジェクト
   skills: スキル
-language: 日本語

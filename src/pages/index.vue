@@ -29,7 +29,7 @@ const componentList = [
 </script>
 
 <template>
-  <div class="mx-auto max-w-2xl w-full space-y-8 print:space-y-6">
+  <div class="mx-auto max-w-2xl w-full space-y-4 print:space-y-4">
     <TheHeader />
     <section v-for="(name, index) in componentList" :key="index" class="min-h-0 flex flex-col gap-y-3">
       <component :is="name" />

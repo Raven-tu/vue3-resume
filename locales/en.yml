@@ -1,22 +1,23 @@
 button:
   about: About
   back: Back
+  export: Export
   go: GO
   home: Home
+  import: Import
+  printer: Printing
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
-  import: Import
-  export: Export
 intro:
+  aka: Also known as
   desc: Opinionated Vite Starter Template
   dynamic-route: Demo of dynamic route
   hi: Hi, {name}!
-  aka: Also known as
   whats-your-name: What's your name?
+language: English
 not-found: Not found
 title:
-  experience: Work Experience
   education: Education
+  experience: Work Experience
   projects: Projects
   skills: Skills
-language: English

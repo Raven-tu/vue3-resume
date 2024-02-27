@@ -3,7 +3,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <section class="min-h-0 flex flex-col gap-y-3">
+  <div class="min-h-0 flex flex-col gap-y-2">
     <h2 class="text-xl font-bold">
       {{ t('title.education') }}
     </h2><div class="bg-card text-card-foreground rounded-lg">
@@ -19,7 +19,7 @@ const { t } = useI18n()
         Bachelor's Degree in Control systems engineering and Robotics
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <style lang='less' scoped></style>

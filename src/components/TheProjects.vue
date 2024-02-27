@@ -20,24 +20,6 @@ const projectList = ref([
     description: 'My personal website and blog. Built with Next.js and Notion API',
     tags: ['Side Project', 'Next.js', 'MDX'],
   },
-  {
-    name: 'Minimal',
-    link: 'https://useminimal.com/',
-    description: 'Minimalist calendars, habit trackers and planners generator',
-    tags: ['Side Project', 'Next.js', 'Puppeteer'],
-  },
-  {
-    name: 'Barepapers',
-    link: 'https://barepapers.com/',
-    description: 'Generates beautiful wallpapers using random shapes and gradients',
-    tags: ['Side Project', 'Next.js', 'Puppeteer'],
-  },
-  {
-    name: 'Evercast',
-    link: 'https://www.evercast.us/',
-    description: 'Creative collaboration platform that combines video conferencing and HD media streaming',
-    tags: ['Lead Frontend Developer', 'TypeScript', 'React', 'Node.js', 'GraphQL'],
-  },
 ])
 </script>
 
@@ -46,17 +28,16 @@ const projectList = ref([
     <h2 class="text-xl font-bold">
       {{ t('title.projects') }}
     </h2>
-    <div class="grid grid-cols-1 gap-3 lg:grid-cols-3 md:grid-cols-2 print:grid-cols-3 -mx-3 print:gap-2">
-      <div v-for="(item, index) in projectList" :key="index" class="bg-card text-card-foreground border-muted flex flex-col overflow-hidden border rounded-lg p-3">
+    <div class="grid grid-cols-1 gap-3 lg:grid-cols-3 md:grid-cols-3 print:grid-cols-2 -mx-3 print:gap-2">
+      <div
+        v-for="(item, index) in projectList" :key="index"
+        class="bg-card text-card-foreground border-muted flex flex-col overflow-hidden border rounded-lg p-3"
+      >
         <div class="flex flex-col space-y-1.5">
           <div class="space-y-1">
             <h3 class="text-base font-semibold tracking-tight">
-              <a
-                :href="item.link" target="_blank"
-                class="inline-flex items-center gap-1 hover:underline"
-              >{{ item.name }}<!-- --> <span
-                class="size-1 rounded-full bg-green-500"
-              /></a>
+              <a :href="item.link" target="_blank" class="inline-flex items-center gap-1 hover:underline">{{ item.name
+              }}<!-- --> <span class="size-1 rounded-full bg-green-500" /></a>
             </h3>
             <div class="hidden text-xs font-mono underline print:visible">
               {{ item.link }}
@@ -70,7 +51,8 @@ const projectList = ref([
           <div class="mt-2 flex flex-wrap gap-1">
             <div
               v-for="(tag, index) in item.tags" :key="index"
-              class="bg-secondary text-secondary-foreground hover:bg-secondary/60 focus:ring-ring inline-flex items-center border border-transparent rounded-md px-1 py-0 text-nowrap text-[10px] font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
+              class="text-secondary-foreground hover:bg-secondary/60 focus:ring-ring bg-secondary inline-flex items-center border border-transparent rounded-md px-1 py-0 text-nowrap text-[10px] font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
+              dark="bg-gray-700"
             >
               {{ tag }}
             </div>

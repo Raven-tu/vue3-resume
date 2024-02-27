@@ -42,7 +42,7 @@ const experienceList = ref([
 </script>
 
 <template>
-  <section class="min-h-0 flex flex-col gap-y-3">
+  <div class="min-h-0 flex flex-col gap-y-2">
     <h2 class="text-xl font-bold">
       {{ t('title.experience') }}
     </h2>
@@ -54,7 +54,7 @@ const experienceList = ref([
             <a :href="item.link" class="hover:underline">{{ item.company }}</a><span class="inline-flex gap-x-1">
               <div
                 v-show="item.location.length"
-                class="focus:ring-ring text-secondary-foreground hover:bg-secondary/60 inline-flex items-center border border-transparent rounded-md bg-gray-200 px-2 py-0.5 text-nowrap align-middle text-xs font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
+                class="text-secondary-foreground hover:bg-secondary/60 focus:ring-ring inline-flex items-center border border-transparent rounded-md bg-gray-200 px-2 py-0.5 text-nowrap align-middle text-xs font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
                 dark="bg-gray-700"
               >
                 {{ item.location }}
@@ -73,7 +73,7 @@ const experienceList = ref([
         {{ item.description }}
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <style lang='less' scoped>
