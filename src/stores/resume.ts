@@ -67,7 +67,6 @@ export const useResumestore = defineStore('resume', () => {
       'Azure',
       'Git',
       'GitHub',
-      'GitLab',
       'Vue',
       'Nuxt',
     ],
