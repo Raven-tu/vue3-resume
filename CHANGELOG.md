@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/Raven-tu/vue3-resume/compare/v1.0.0...v1.1.0) (2024-02-28)
+
+
+### Features
+
+* add avatar box ([9dccf14](https://github.com/Raven-tu/vue3-resume/commit/9dccf14d4ef1b417c2137cab2e3142388a006a08))
+* Add Korean translation for locales ([4f438a0](https://github.com/Raven-tu/vue3-resume/commit/4f438a04eb290270c30e034dd6df40239759c26a))
+
 ## 1.0.0 (2024-02-28)
 
 
