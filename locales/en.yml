@@ -10,6 +10,7 @@ button:
   toggle_langs: Change languages
   copy: Copy
   reset: Reset
+  upload: Upload
 intro:
   aka: Also known as
   desc: Opinionated Vite Starter Template

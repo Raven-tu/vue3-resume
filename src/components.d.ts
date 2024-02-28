@@ -13,6 +13,7 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     SkillsUpdater: typeof import('./components/SkillsUpdater.vue')['default']
     TextUpdater: typeof import('./components/TextUpdater.vue')['default']
+    TheAvatar: typeof import('./components/TheAvatar.vue')['default']
     TheEducation: typeof import('./components/TheEducation.vue')['default']
     TheExperience: typeof import('./components/TheExperience.vue')['default']
     TheHeader: typeof import('./components/TheHeader.vue')['default']

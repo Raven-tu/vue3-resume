@@ -26,9 +26,8 @@ const aboutData = computed({
         <TextUpdater v-model="aboutData.contack" w-full />
       </footer>
     </div>
-    <figure class="relative size-28 flex shrink-0 overflow-hidden rounded-xl">
-      <div class="aspect-square h-full w-full" />
-      <!-- <img src="/me.webp" alt="Miguel Ángel Durán" > -->
+    <figure class="relative size-28 flex shrink-0">
+      <TheAvatar class="aspect-square h-full w-full overflow-hidden rounded-xl object-cover" />
     </figure>
   </div>
 </template>

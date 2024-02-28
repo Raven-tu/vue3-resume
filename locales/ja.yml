@@ -10,6 +10,7 @@ button:
   reset: リセット
   toggle_dark: ダークモード切り替え
   toggle_langs: 言語切り替え
+  upload: アップロード
 intro:
   desc: 固執された Vite スターターテンプレート
   dynamic-route: 動的ルートのデモ
