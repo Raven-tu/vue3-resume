@@ -21,15 +21,17 @@ const educationData = computed({
       <div class="flex flex-col space-y-1.5">
         <div class="flex items-center justify-between gap-x-2 text-base">
           <h3 class="font-semibold leading-none">
-            {{ item.name }}
+            <TextUpdater v-model="item.name" w-full />
           </h3>
           <div class="text-sm text-gray-500 tabular-nums">
-            {{ `${item.start_date} - ${item.end_date}` }}
+            <TextUpdater v-model="item.start_date" w-14 />
+            <!--  --> - <!--  -->
+            <TextUpdater v-model="item.end_date" w-14 />
           </div>
         </div>
       </div>
       <div class="text-muted-foreground mt-2 text-pretty text-sm font-mono">
-        {{ item.degree }}
+        <TextUpdater v-model="item.degree" w-full />
       </div>
     </div>
   </div>

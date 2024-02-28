@@ -25,16 +25,19 @@ const projectsData = computed({
         <div class="flex flex-col space-y-1.5">
           <div class="space-y-1">
             <h3 class="text-base font-semibold tracking-tight">
-              <a :href="item.link" target="_blank" class="inline-flex items-center gap-1 hover:underline">
-                {{ item.name }}
+              <span class="inline-flex items-center gap-1 hover:underline">
+                <TextUpdater v-model="item.name" w-full />
                 <span class="size-1 rounded-full bg-green-500" />
-              </a>
+                <a flex-cc icon-btn space-x-1 :href="item.link" target="_blank" print="hidden">
+                  <i i-carbon-link />
+                </a>
+              </span>
             </h3>
-            <div v-show="item.link" class="hidden text-xs font-mono underline print:block">
-              {{ item.link }}
+            <div v-show="item.link" class="block text-xs font-mono">
+              <TextUpdater v-model="item.link" w-full />
             </div>
             <p class="text-muted-foreground text-xs font-mono">
-              {{ item.description }}
+              <TextUpdater v-model="item.description" w-full :row="4" />
             </p>
           </div>
         </div>

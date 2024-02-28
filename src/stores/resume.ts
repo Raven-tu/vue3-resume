@@ -6,9 +6,7 @@ export const useResumestore = defineStore('resume', () => {
       name: 'Miguel Ángel Durán',
       role: 'Full Stack Developer con más de 15 años de experiencia & Creador de Contenido de Programación',
       location: 'el Prat de Llobregat, España',
-      email: 'miduga@gmail.com',
-      phone: '+34 688888888',
-      linkedin: 'https://linkedin.com/in/midudev',
+      contack: 'miduga@gmail.com | +34 688888888 | https://linkedin.com/in/midudev',
     },
     experience: [
       {

@@ -14,15 +14,16 @@ const aboutData = computed({
   <div class="flex items-center justify-between container">
     <div class="info flex-1 space-y-1.5">
       <h1 class="font-weight-400 text-2xl font-bold">
-        {{ aboutData.name }}
+        <TextUpdater v-model="aboutData.name" w-full />
       </h1>
       <h2 class="text-muted-foreground max-w-md text-pretty text-sm font-mono">
-        {{ aboutData.role }}
+        <TextUpdater v-model="aboutData.role" :row="2" w-full />
       </h2>
       <span class="text-muted-foreground max-w-md items-center text-pretty text-xs font-mono">
-        {{ aboutData.location }} </span>
+        <TextUpdater v-model="aboutData.location" w-full />
+      </span>
       <footer class="contack">
-        {{ aboutData.email }} | {{ aboutData.phone }} | {{ aboutData.linkedin }}
+        <TextUpdater v-model="aboutData.contack" w-full />
       </footer>
     </div>
     <figure class="relative size-28 flex shrink-0 overflow-hidden rounded-xl">
