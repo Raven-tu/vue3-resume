@@ -8,7 +8,7 @@ const { copy, isSupported } = useClipboard()
 const { t } = useI18n()
 
 const { currentData } = storeToRefs(useResumestore())
-const { importData } = useResumestore()
+const { importData, resetData } = useResumestore()
 usePermission('clipboard-read')
 usePermission('clipboard-write')
 const dialogVisible = inject('dialogvisible', ref(false))
@@ -46,6 +46,10 @@ function doImport() {
     <div class="flex-cc gap-x-4">
       <button class="btn" @click="doImport">
         {{ t('button.import') }}
+      </button>
+
+      <button class="btn" @click="resetData">
+        {{ t('button.reset') }}
       </button>
 
       <button class="btn" :disabled="isSupported" @click="copy(`123`)">

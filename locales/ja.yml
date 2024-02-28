@@ -7,6 +7,7 @@ button:
   home: ホーム
   import: 輸入
   printer: 印刷
+  reset: リセット
   toggle_dark: ダークモード切り替え
   toggle_langs: 言語切り替え
 intro:

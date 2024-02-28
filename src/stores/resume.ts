@@ -104,9 +104,14 @@ export const useResumestore = defineStore('resume', () => {
     await nextTick()
   }
 
+  const resetData = () => {
+    currentData.value = defaultData
+  }
+
   return {
     currentData,
     importData,
+    resetData,
   }
 })
 
