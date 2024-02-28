@@ -49,7 +49,7 @@ function getSkillIcon(name: string) {
     <h2 class="text-xl font-bold">
       {{ t('title.skills') }}
     </h2>
-    <div class="flex flex-wrap gap-1">
+    <SkillsUpdater v-model="skillsData" class="flex flex-wrap gap-1">
       <div
         v-for="(item, index) in skillsData" :key="index" dark="bg-gray-700"
         class="text-secondary-foreground hover:bg-secondary/60 focus:ring-ring inline-flex items-center border border-transparent rounded-md bg-gray-200 px-2 py-0.5 text-nowrap align-middle text-xs font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
@@ -59,7 +59,7 @@ function getSkillIcon(name: string) {
           <span> {{ item }}</span>
         </span>
       </div>
-    </div>
+    </SkillsUpdater>
   </div>
 </template>
 

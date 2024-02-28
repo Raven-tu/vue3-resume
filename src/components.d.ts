@@ -11,6 +11,7 @@ declare module 'vue' {
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SkillsUpdater: typeof import('./components/SkillsUpdater.vue')['default']
     TextUpdater: typeof import('./components/TextUpdater.vue')['default']
     TheAbout: typeof import('./components/TheAbout.vue')['default']
     TheCounter: typeof import('./components/TheCounter.vue')['default']

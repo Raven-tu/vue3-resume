@@ -27,10 +27,10 @@ const projectsData = computed({
             <h3 class="text-base font-semibold tracking-tight">
               <span class="inline-flex items-center gap-1 hover:underline">
                 <TextUpdater v-model="item.name" w-full />
-                <span class="size-1 rounded-full bg-green-500" />
-                <a flex-cc icon-btn space-x-1 :href="item.link" target="_blank" print="hidden">
+                <a v-show="item.link" flex-cc icon-btn space-x-1 :href="item.link" target="_blank" print="hidden">
                   <i i-carbon-link />
                 </a>
+                <span class="size-1 rounded-full bg-green-500" />
               </span>
             </h3>
             <div v-show="item.link" class="block text-xs font-mono">
@@ -42,15 +42,15 @@ const projectsData = computed({
           </div>
         </div>
         <div class="text-muted-foreground mt-auto flex text-pretty text-sm font-mono">
-          <div class="mt-2 flex flex-wrap gap-1">
+          <SkillsUpdater v-model="item.tags" class="mt-2 flex flex-wrap gap-1">
             <div
               v-for="(tag, idx) in item.tags" :key="idx"
-              class="bg-secondary text-secondary-foreground hover:bg-secondary/60 focus:ring-ring inline-flex items-center border border-transparent rounded-md px-1 py-0 text-nowrap text-[10px] font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
+              class="text-secondary-foreground hover:bg-secondary/60 focus:ring-ring bg-secondary inline-flex items-center border border-transparent rounded-md px-1 py-0 text-nowrap text-[10px] font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
               dark="bg-gray-700"
             >
               {{ tag }}
             </div>
-          </div>
+          </SkillsUpdater>
         </div>
       </div>
     </div>
