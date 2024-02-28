@@ -97,7 +97,8 @@ export const useResumestore = defineStore('resume', () => {
       },
     ],
   }
-  const currentData = ref(defaultData)
+
+  const currentData = useStorage('resume-storage', defaultData)
 
   async function importData(data: typeof defaultData) {
     currentData.value = data
@@ -108,10 +109,16 @@ export const useResumestore = defineStore('resume', () => {
     currentData.value = defaultData
   }
 
+  function $reset() {
+    resetData()
+  }
+
   return {
+    defaultData: readonly(defaultData),
     currentData,
     importData,
     resetData,
+    $reset,
   }
 })
 

@@ -1,21 +1,26 @@
-import { beforeEach, describe, expect, it } from 'vitest'
+import { beforeAll, beforeEach, describe, expect, it } from 'vitest'
 import { createPinia, setActivePinia } from 'pinia'
 import { useResumestore } from '~/stores/resume'
 
 describe('store useResumestore', () => {
-  beforeEach(() => {
+  beforeAll(() => {
     setActivePinia(createPinia())
   })
 
+  beforeEach(() => {
+    const { resetData } = useResumestore()
+    resetData()
+  })
+
   it('should active', () => {
-    const { currentData } = useResumestore()
-    expect(currentData.about.name).toBe('Miguel Ángel Durán')
+    const store = useResumestore()
+    expect(store.currentData.about.name).toBe('Miguel Ángel Durán')
   })
 
   it('should can be import', () => {
-    const { currentData, importData } = useResumestore()
-    expect(currentData.about.name).toBe('Miguel Ángel Durán')
-    importData({
+    const store = useResumestore()
+    expect(store.currentData.about.name).toBe('Miguel Ángel Durán')
+    store.importData({
       about: {
         name: '123',
         role: '456',
@@ -34,9 +39,11 @@ describe('store useResumestore', () => {
   })
 
   it('should be reactive', () => {
-    const resumestore = useResumestore()
-    expect(resumestore.currentData.about.name).toBe('Miguel Ángel Durán')
-    resumestore.currentData.about.name = '123'
-    expect(resumestore.currentData.about.name).toBe('123')
+    const store = useResumestore()
+    expect(store.currentData.about.name).toBe('Miguel Ángel Durán')
+    store.$patch((state) => {
+      state.currentData.about.name = '123'
+    })
+    expect(store.currentData.about.name).toBe('123')
   })
 })
