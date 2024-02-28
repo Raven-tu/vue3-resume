@@ -98,7 +98,7 @@ export const useResumestore = defineStore('resume', () => {
     ],
   }
 
-  const currentData = useStorage('resume-storage', defaultData, localStorage, { mergeDefaults: true })
+  const currentData = useLocalStorage('resume-storage', defaultData, { mergeDefaults: true })
 
   async function importData(data: typeof defaultData) {
     currentData.value = data
