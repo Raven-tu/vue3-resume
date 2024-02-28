@@ -1,0 +1,25 @@
+button:
+  about: 소개
+  back: 뒤로
+  copy: 복사
+  export: 내보내기
+  go: 이동
+  home: 홈
+  import: 가져오기
+  printer: 인쇄
+  reset: 재설정
+  toggle_dark: 다크 모드 전환
+  toggle_langs: 언어 전환
+  upload: 업로드
+intro:
+  desc: 고집스러운 Vite 스타터 템플릿
+  dynamic-route: 동적 경로 데모
+  hi: 안녕하세요, {name}!
+  whats-your-name: 이름이 뭐에요?
+language: 한국어
+not-found: 찾을 수 없음
+title:
+  education: 교육
+  experience: 경험
+  projects: 프로젝트
+  skills: 기술
